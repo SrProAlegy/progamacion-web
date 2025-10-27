@@ -1,0 +1,156 @@
+:root {
+	--naranja: #f7941d;
+	--morado: #5d2f8f;
+	--verde: #3a6b35;
+	--crema: #f5f1e8;
+	--carbon: #414141;
+}
+
+body {
+	background-color: var(--crema);
+	color: var(--carbon);
+	font-family: "Roboto", sans-serif;
+}
+
+.bg-crema {
+	background-color: var(--crema);
+	color: var(--carbon);
+	font-family: "Roboto", sans-serif;
+}
+
+/* .navbar a {
+	color: white !important;
+	font-weight: 500;
+} */
+
+.navbar a:hover {
+	color: var(--naranja) !important;
+}
+
+/* ====== ESTILO BASE DEL BANNER ====== */
+header.banner {
+	color: white;
+	text-align: center;
+	padding: 120px 20px;
+}
+
+/* ====== CAPA OSCURA + IMAGEN DIFERENTE POR PÁGINA ====== */
+header.banner-inicio {
+	background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)),
+		url("../assets/img/banner/inicio.jpg") top/cover no-repeat;
+}
+
+header.banner-origen {
+	background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)),
+		url("../assets/img/contenido/prehispanico.jpg") center/cover no-repeat;
+}
+
+header.banner-comida {
+	background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)),
+		url("../assets/img/banner/comida.jpg") top/cover no-repeat;
+}
+
+header.banner-tradicion {
+	background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)),
+		url("../assets/img/banner/tradiciones.webp") top/cover no-repeat;
+}
+
+header.banner-arte {
+	background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)),
+		url("../assets/img/banner/arte.webp") top/cover no-repeat;
+}
+
+header.banner-ofrenda {
+	background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)),
+		url("../assets/img/banner/ofrenda.png") top/cover no-repeat;
+}
+
+header.banner-galeria {
+	background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)),
+		url("../assets/img/banner/galeria.webp") bottom/cover no-repeat;
+}
+
+header.banner-leyenda {
+	background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)),
+		url("../assets/img/banner/leyenda.webp") center/cover no-repeat;
+}
+
+header h1 {
+	font-size: 3rem;
+	font-weight: bold;
+}
+
+header p {
+	font-size: 1.3rem;
+}
+
+.section-title {
+	color: var(--naranja);
+	font-weight: bold;
+	margin-bottom: 20px;
+	text-transform: uppercase;
+}
+
+.section-title-alter {
+	color: var(--morado);
+	font-weight: bold;
+	margin-bottom: 20px;
+	text-transform: uppercase;
+}
+
+.btn-naranja {
+	background-color: var(--naranja);
+	color: white;
+	border: none;
+}
+
+.btn-naranja:hover {
+	color: white;
+	background-color: #e67e00;
+}
+
+.btn-morado {
+	background-color: var(--morado);
+	color: white;
+	border: none;
+}
+
+.btn-morado:hover {
+	color: white;
+	background-color: #47236d;
+}
+
+.link:hover {
+	color: var(--naranja) !important;
+	text-decoration: underline;
+}
+
+footer {
+	background-color: var(--carbon);
+	color: white;
+	padding: 40px 0;
+}
+
+footer a {
+	color: var(--naranja);
+	text-decoration: none;
+}
+
+footer a:hover {
+	text-decoration: underline;
+}
+
+.timeline {
+  position: relative;
+  padding-left: 1px;
+}
+
+.timeline::before {
+  content: "";
+  position: absolute;
+  left: 9px;
+  top: 0;
+  bottom: 0;
+  width: 4px;
+  background-color: rgba(0, 0, 0, 0.1);
+}
