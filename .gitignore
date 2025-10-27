@@ -1,0 +1,6 @@
+# Ignorar todo
+*
+
+# Pero no ignores estas carpetas/archivos:
+!diamuertoscampeche/
+!.gitignore
