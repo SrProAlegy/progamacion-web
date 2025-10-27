@@ -3,4 +3,5 @@
 
 # Pero no ignores estas carpetas/archivos:
 !diamuertoscampeche/
+!diamuertoscampecheblank/
 !.gitignore
