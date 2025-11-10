@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+	<meta http-equiv="x-ua-compatible" content="ie=edge">
+	<title>Inicio</title>
+	<!--  icon -->
+	<link rel="icon" href="#" type="image/x-icon">
+	<!-- Font Awesome -->
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+	<!-- Google Fonts Roboto -->
+	<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700&display=swap">
+	<!-- Bootstrap core CSS -->
+	<link rel="stylesheet" href="bootstrap/css/bootstrap.min.css">
+	<!-- Your custom styles (optional) -->
+	<link rel="stylesheet" href="css/style.css">
+</head>
+
+<header>
+
+</header>
+
+<style>
+	body{
+		background-color: #f8f9fa; /*fondo color*/
+	}
+
+	.form-container-custom{
+		background-color: #ffff; /*Contenedor blanco*/
+		border-radius: 1rem; /*Bordes redondeados*/
+		box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.15); /*Sombra suave*/
+		padding: 2.5rem; /*espaciado interno*/
+	}
+
+	.btn-custom {
+		font-size: 1.1rem;
+		padding: 0.75rem 1.5rem;
+		border-radius: 0.5rem;
+	}
+</style>
+
+<body>
+	<!-- contenedor principal -->
+	<div class="container py-5">
+		<div class="row justify-content-center">
+			<div class="col-lg-8 col-xl-7">
+				<div class="form-container-custom">
+					<!-- encabezado formulario -->
+					<h2 class="text-center mb-4 fw-bold text-primary">Ejemplo de Formulario</h2>
+					<!-- descripcion del formulario -->
+					<p class="text-center text-muted mb-5">
+						Completa de manera correcta los datos solicitados. La validación se llevará a cabo al enviar.
+					</p>
+					<form action="/submit-data" method="post" class="row">
+						<!-- campo para nombre -->
+						<div class="col-md-6">
+							<!-- etiqueta del campo -->
+							<label for="inputNombre" class="form-label fw-semibold">Nombre <span>*</span></label>
+
+							<input type="text" class="form-control form-control-lg" name="nombre" id="inputNombre"
+								placeholder="Coloque su nombre" required>
+
+							<div class="invalid-feedback">
+								Por favor, ingrese su nombre.
+							</div>
+						</div>
+
+						<!-- campo para nombre -->
+						<div class="col-md-6">
+							<!-- etiqueta del campo -->
+							<label for="inputApellido" class="form-label fw-semibold">Apellidos <span>*</span></label>
+
+							<input type="text" class="form-control form-control-lg" name="apellido" id="inputApellido"
+								placeholder="Coloque su apellido" required>
+
+							<div class="invalid-feedback">
+								Por favor, ingrese su apellido.
+							</div>
+						</div>
+
+						<!-- campo para correo electronico -->
+						<div class="col-md-6">
+							<!-- etiqueta del Correo electronico -->
+							<label for="inputEmail" class="form-label fw-semibold">Correo electronico
+								<span>*</span></label>
+
+							<input type="email" class="form-control form-control-lg" name="email" id="inputEmail"
+								placeholder="ejemplo@dominio.com" required>
+
+							<div class="form-text">
+								Usaremos este correo para contactarte
+							</div>
+						</div>
+
+						<!-- campo para contraseña -->
+						<div class="col-md-6">
+							<label for="inputPassword" class="form-label fw-semibold">Contraseña <span>*</span></label>
+
+							<input type="password" class="form-control form-control-lg" name="password"
+								id="inputPassword" minlength="8" required>
+
+							<div class="form-text">Mínimo de 8 caracteres</div>
+						</div>
+
+						<!-- lista desplegable -select- -->
+						<div class="col-12">
+							<label for="selectArea" class="form-label fw-semibold">Seleccione su área de Interés</label>
+
+							<select name="area" id="selectArea" class="form-select form-select-lg"
+								aria-label="Seleccoine su área">
+
+								<!-- opciones por defecto -->
+
+								<option selected value="">Seleccione una opción</option>
+								<option value="desarrollo">Desarrollo</option>
+								<option value="tester">Tester</option>
+								<option value="analista">Analista</option>
+								<option value="dba">DBA</option>
+								<option value="marketing">Marketing</option>
+							</select>
+						</div>
+
+						<!-- campo de texto multilineas -->
+						<div class="col-12">
+							<label for="textareaComentarios" class="form-label fw-semibold">Deja tu comentario</label>
+
+							<textarea name="comentarios" id="textareaComentarios" class="form-control form-control-lg"
+								rows="3" placeholder="describe brevemente tu idea..."></textarea>
+						</div>
+
+						<!-- grupo de botones de seleccion -->
+						<div class="col-12 mb-3">
+							<p class="form-label fw-semibold mb-2">Preferencias de contacto</p>
+
+							<!-- opcion 1 -->
+							<div class="form-check form-check-inline">
+								<input class="form-check-input" type="radio" name="contacto" id="radioEmail"
+									value="email" checked>
+								<label for="radioEmail" class="form-check-label">Email</label>
+							</div>
+
+							<!-- opcion 2 -->
+							<div class="form-check form-check-inline">
+								<input class="form-check-input" type="radio" name="contacto" id="radioTelefono"
+									value="telefono">
+								<label for="radioTelefono" class="form-check-label">Teléfono</label>
+							</div>
+						</div>
+
+						<!-- casilla de verificación -->
+						<div class="col-12">
+							<div class="form-check mb-4">
+								<input class="form-check-input" type="checkbox" name="terminos" id="checkTerminos"
+									value="aceptar">
+
+								<label class="form-check-label" for=" checkTerminos">Acepta los terminos <a href="#"
+										class="text-decoration-none text-primary fw-medium"> y condiciones <span
+											class="text-danger">*</span></a>
+								</label>
+
+								<!-- mensaje de error si no se selecciona -->
+								<div class="invalid-feedback">
+									Debes aceptar para continuar
+								</div>
+
+								<!-- botones de acciones -->
+								<div class="col-12 d-grid gap-2 d-md-flex justify-content-md-end">
+									<button type="reset" class="btn btn-outline-secondary btn-custom">Limpiar Campos</button>
+
+									<button type="submit" class="btn btn-primary btn-custom">Enviar formulario</button>
+								</div>
+							</div>
+						</div>
+					</form>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<!-- Bootstrap core JavaScript -->
+	<script type="text/javascript" src="bootstrap/js/bootstrap.bundle.min.js"></script>
+</body>
+
+</html>
